@@ -64,10 +64,10 @@ class _ProductState extends State<Product> {
                                 .read<CartProvider>()
                                 .addToCart(widget.product);
                             ScaffoldMessenger.of(context).showSnackBar(
-                              const SnackBar(
+                               SnackBar(
                                 backgroundColor:
-                                    Color.fromARGB(255, 247, 247, 247),
-                                content: Text(
+                                    Colors.grey.withOpacity(0.8),
+                                content: const Text(
                                   "Item added!",
                                   style: TextStyle(
                                     color: Colors.black,

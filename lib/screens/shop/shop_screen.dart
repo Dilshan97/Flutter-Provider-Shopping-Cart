@@ -29,7 +29,77 @@ class _ShopScreenState extends State<ShopScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               SizedBox(
-                height: size.height * 0.060,
+                height: size.height * 0.080,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "Buy your",
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w600,
+                          fontSize: size.width * 0.050,
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                      Text(
+                        "favorite gadget",
+                        style: GoogleFonts.poppins(
+                          fontWeight: FontWeight.w400,
+                          fontSize: size.width * 0.040,
+                        ),
+                      )
+                    ],
+                  ),
+                   CircleAvatar(
+                    radius: size.width * 0.060,
+                    foregroundImage: const NetworkImage(
+                      "https://t3.ftcdn.net/jpg/02/00/90/24/360_F_200902415_G4eZ9Ok3Ypd4SZZKjc8nqJyFVp1eOD6V.jpg",
+                    ),
+                  )
+                ],
+              ),
+              SizedBox(
+                height: size.height * 0.020,
+              ),
+              SizedBox(
+                width: size.width,
+                child: TextFormField(
+                  decoration: InputDecoration(
+                    focusColor: Colors.black38,
+                    isCollapsed: false,
+                    hintText: "Search gadgets",
+                    prefixIcon: const Icon(Icons.search),
+                    hintStyle: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                        fontSize: size.width * 0.040,
+                      ),
+                    ),
+                    contentPadding: EdgeInsets.symmetric(
+                      horizontal: size.width * 0.01,
+                    ),
+                    focusedBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50),
+                      borderSide: const BorderSide(
+                        color: Colors.black26,
+                        width: 1,
+                      ),
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(50),
+                      borderSide: const BorderSide(
+                        color: Colors.black26,
+                        width: 1,
+                      ),
+                    ),
+                  ),
+                ),
+              ),
+              SizedBox(
+                height: size.height * 0.030,
               ),
               Column(
                 children: [
@@ -79,9 +149,10 @@ class _ShopScreenState extends State<ShopScreen> {
                   SizedBox(
                     height: size.height * 0.020,
                   ),
-                   CategoryHeader(
+                  CategoryHeader(
                     title: 'iPhone',
-                    count: '${Provider.of<ProductProvider>(context).iphone.length}',
+                    count:
+                        '${Provider.of<ProductProvider>(context).iphone.length}',
                   ),
                   SizedBox(
                     height: size.height * 0.020,
@@ -103,12 +174,13 @@ class _ShopScreenState extends State<ShopScreen> {
                   ),
                   CategoryHeader(
                     title: 'Accessories',
-                    count: '${Provider.of<ProductProvider>(context).accessories.length}',
+                    count:
+                        '${Provider.of<ProductProvider>(context).accessories.length}',
                   ),
                   SizedBox(
                     height: size.height * 0.020,
                   ),
-                   SingleChildScrollView(
+                  SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Consumer<ProductProvider>(
                       builder: (context, value, child) => Row(
@@ -125,12 +197,13 @@ class _ShopScreenState extends State<ShopScreen> {
                   ),
                   CategoryHeader(
                     title: 'Audio',
-                    count: '${Provider.of<ProductProvider>(context).audio.length}',
+                    count:
+                        '${Provider.of<ProductProvider>(context).audio.length}',
                   ),
                   SizedBox(
                     height: size.height * 0.020,
                   ),
-                   SingleChildScrollView(
+                  SingleChildScrollView(
                     scrollDirection: Axis.horizontal,
                     child: Consumer<ProductProvider>(
                       builder: (context, value, child) => Row(
