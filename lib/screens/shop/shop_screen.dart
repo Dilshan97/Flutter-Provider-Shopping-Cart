@@ -31,55 +31,6 @@ class _ShopScreenState extends State<ShopScreen> {
               SizedBox(
                 height: size.height * 0.060,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  GestureDetector(
-                    onTap: () => Navigator.of(context).pushNamed(Routes.home),
-                    child: Stack(
-                      clipBehavior: Clip.none,
-                      children: [
-                        Container(
-                          width: 50,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            border: Border.all(
-                              color: Colors.black26,
-                            ),
-                            borderRadius: BorderRadius.circular(15),
-                          ),
-                          child: const Center(
-                            child: Icon(
-                              Iconsax.bag,
-                              color: Colors.black26,
-                              size: 18,
-                            ),
-                          ),
-                        ),
-                        Positioned(
-                          right: -3,
-                          top: -3,
-                          child: CircleAvatar(
-                            backgroundColor: Colors.redAccent,
-                            radius: 10,
-                            child: Text(
-                              context.watch<CartProvider>().shoppingCart.length.toString(),
-                              style: GoogleFonts.poppins(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w500,
-                                color: Colors.white,
-                              ),
-                            ),
-                          ),
-                        )
-                      ],
-                    ),
-                  )
-                ],
-              ),
-              SizedBox(
-                height: size.height * 0.030,
-              ),
               Column(
                 children: [
                   CategoryHeader(
@@ -140,6 +91,50 @@ class _ShopScreenState extends State<ShopScreen> {
                     child: Consumer<ProductProvider>(
                       builder: (context, value, child) => Row(
                         children: value.iphone
+                            .map((product) => Product(
+                                  product: product,
+                                ))
+                            .toList(),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.020,
+                  ),
+                  CategoryHeader(
+                    title: 'Accessories',
+                    count: '${Provider.of<ProductProvider>(context).accessories.length}',
+                  ),
+                  SizedBox(
+                    height: size.height * 0.020,
+                  ),
+                   SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Consumer<ProductProvider>(
+                      builder: (context, value, child) => Row(
+                        children: value.accessories
+                            .map((product) => Product(
+                                  product: product,
+                                ))
+                            .toList(),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: size.height * 0.020,
+                  ),
+                  CategoryHeader(
+                    title: 'Audio',
+                    count: '${Provider.of<ProductProvider>(context).audio.length}',
+                  ),
+                  SizedBox(
+                    height: size.height * 0.020,
+                  ),
+                   SingleChildScrollView(
+                    scrollDirection: Axis.horizontal,
+                    child: Consumer<ProductProvider>(
+                      builder: (context, value, child) => Row(
+                        children: value.audio
                             .map((product) => Product(
                                   product: product,
                                 ))

@@ -32,15 +32,23 @@ class _ProductState extends State<Product> {
               children: [
                 Container(
                   width: double.infinity,
-                  height: 126,
+                  height: 140,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(10),
-                    color: const Color(0xffF2F2F2),
+                    // color: const Color(0xffF2F2F2),
+                    color: Colors.white54,
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.white60.withOpacity(1),
+                        spreadRadius: 0.5,
+                        offset: const Offset(5, 5),
+                      ),
+                    ],
                   ),
                   child: Center(
                     child: Image.network(
                       widget.product.image,
-                      fit: BoxFit.fitWidth,
+                      fit: BoxFit.cover,
                       width: 100,
                       height: 100,
                     ),

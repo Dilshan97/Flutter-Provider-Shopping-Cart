@@ -26,52 +26,17 @@ class _CartScreenState extends State<CartScreen> {
               height: size.height * 0.060,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GestureDetector(
-                  onTap: () => {},
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      color: const Color(0xffF2F2F4),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Icons.chevron_left_outlined,
-                        color: Colors.grey,
-                        size: 26,
-                      ),
+                Center(
+                  child: Text(
+                    "Order Details",
+                    style: GoogleFonts.poppins(
+                      fontSize: size.width * 0.040,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ),
-                Text(
-                  "Order Details",
-                  style: GoogleFonts.poppins(
-                    fontSize: size.width * 0.040,
-                  ),
-                ),
-                GestureDetector(
-                  onTap: () => {},
-                  child: Container(
-                    width: 50,
-                    height: 50,
-                    decoration: BoxDecoration(
-                      border: Border.all(
-                        color: const Color(0xffF2F2F4),
-                      ),
-                      borderRadius: BorderRadius.circular(15),
-                    ),
-                    child: const Center(
-                      child: Icon(
-                        Iconsax.user,
-                        color: Colors.grey,
-                        size: 18,
-                      ),
-                    ),
-                  ),
-                )
               ],
             ),
             SizedBox(
@@ -161,6 +126,9 @@ class _CartScreenState extends State<CartScreen> {
                         style: GoogleFonts.poppins(),
                       )
                     ],
+                  ),
+                  SizedBox(
+                    height: size.height * 0.008,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,

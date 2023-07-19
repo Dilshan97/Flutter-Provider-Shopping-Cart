@@ -32,7 +32,7 @@ class _CartItemState extends State<CartItem> {
             width: size.width * 0.30,
             height: size.height * 0.13,
             decoration: BoxDecoration(
-              color: const Color(0xffF2F2F4),
+              color: Colors.white,
               borderRadius: BorderRadius.circular(14),
             ),
             child: Center(
@@ -62,7 +62,7 @@ class _CartItemState extends State<CartItem> {
                 Text(
                   "\$${widget.cartItem.product.price}",
                   style: GoogleFonts.poppins(
-                    color: Colors.grey,
+                    color: Colors.black.withOpacity(0.8),
                     fontSize: size.width * 0.035,
                   ),
                 ),
