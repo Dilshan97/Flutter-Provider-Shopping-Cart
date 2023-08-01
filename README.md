@@ -24,5 +24,5 @@ Here are the UI screens that I developed for this project
 
 ## App UI's
 
-| <img src="https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart/blob/main/screenshots/splash.png" style="width: 350px;"/> |  <img src="https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart/blob/main/screenshots/login.png" style="width: 350px;"/>  |
+| <img src="https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart/blob/main/screenshots/Screenshot-01.png" style="width: 350px;"/> |  <img src="https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart/blob/main/screenshots/Screenshot-02.png" style="width: 350px;"/>  |
 |--|--|
