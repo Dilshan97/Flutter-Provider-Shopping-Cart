@@ -1,16 +1,28 @@
-# flutter_provider_shopping_cart
+# Flutter & Provider Shopping Cart App
 
-A new Flutter project.
+A simple flutter application with includeing the state management techniques with the [Provider State Management](https://pub.dev/packages/provider)  package.
 
-## Getting Started
+In this project, I'll try to learn how to integrate the Provider State Management Package into the Flutter application and improve the existing app UI. I'm not using any third party API's for fetch the products to the app.
 
-This project is a starting point for a Flutter application.
+*TODO:*
 
-A few resources to get you started if this is your first Flutter project:
+- Integrate the Firebase Firestore to manage products
+- Authentication with Firebase
+- Improve UI's
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## How to run this project
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Clone this repository using following command.
+
+`git clone https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart`
+
+Then navigate to the project & install the libraries using following command.
+
+`flutter pub get`
+
+Here are the UI screens that I developed for this project
+
+## App UI's
+
+| <img src="https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart/blob/main/screenshots/splash.png" style="width: 350px;"/> |  <img src="https://github.com/Dilshan97/Flutter-Provider-Shopping-Cart/blob/main/screenshots/login.png" style="width: 350px;"/>  |
+|--|--|
