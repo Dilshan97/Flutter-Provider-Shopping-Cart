@@ -1,8 +1,8 @@
 # Flutter & Provider Shopping Cart App
 
-A simple flutter application with includeing the state management techniques with the [Provider State Management](https://pub.dev/packages/provider)  package.
+A simple flutter application including the state management techniques with the [Provider State Management](https://pub.dev/packages/provider)  package.
 
-In this project, I'll try to learn how to integrate the Provider State Management Package into the Flutter application and improve the existing app UI. I'm not using any third party API's for fetch the products to the app.
+In this project, I'll try to learn how to integrate the Provider State Management Package into the Flutter application and improve the existing app UI. I'm not using any third-party API's for fetching the products to the app.
 
 *TODO:*
 
